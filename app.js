@@ -5,8 +5,7 @@ const inputName = document.getElementById("amigo")
 
 
 function agregarAmigo() {
-
-       
+      
     if (inputName.value===""){
         alert("Por favor, inserte un nombre")
         return //se usa el return para que una cadena vacia no haga parte del lengh del array
@@ -20,16 +19,13 @@ function agregarAmigo() {
         return
     }
 
-
-
-
     amigos.push(inputName.value)
     console.log(amigos)
 
     inputName.value=""
        
 }
-
+// se agrega la funcionalidad de agregar un amigo al presionar la tecla enter
 inputName.addEventListener("keypress",(event) =>{
     if (event.key==="Enter") {
         agregarAmigo()
