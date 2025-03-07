@@ -4,6 +4,7 @@ const amigos = []
 const inputName = document.getElementById("amigo")
 //Se crea una constante para acceder a la lista de amigos
 const list = document.getElementById("listaAmigos")
+const winer = document.getElementById("resultado")
 
 
 function agregarAmigo() {
@@ -44,7 +45,19 @@ function actualizarLista(){
         list.appendChild(li)
         
     }
-    alert("La lista ha sido actualizada")
+    //return alert("La lista ha sido actualizada")
+    
 }
 
-function 
+
+function sortearAmigo(){
+    list.innerHTML=""
+    if(amigos.length===0){
+        alert("No hay amigos para realizar el sorteo")
+        return
+    }
+    const random = Math.floor((Math.random() * amigos.length))
+    winer.innerHTML=(`El ganador del sorteo es: ${amigos[random]}`)
+       
+}
+
